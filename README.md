@@ -21,10 +21,8 @@ Visit [mini-lobcder](https://github.com/micro-infrastructure/mini-lobcder/blob/m
 As described in the architecture above. User's interaction with the system is two-fold; first, you create a description file for your micro-infrastructure this usually includes a set of sshfs adaptors to remote servers and a set of services that work on the data such as Jupyter, scp2scp or any other container developed by the user. Secondly, after the description file has been submitted to core-infra service, you interact with your own new services. The following steps will give you more details on how to deploy a micro-infrastructure:
 - getting an access token to access core-infra: 
 Before being able to access the core-infra service and able to submit micro-infrastrucure you need an access token to access the API. This can be done be asking the admin of the system to create one. Alternativaly you can experiment with a local [mini-lobcder](https://github.com/micro-infrastructure/mini-lobcder/blob/master/README.md) installation which creates a default user on installation. 
-- create a micro-infrastructure description file:
-follow instructions [here](https://github.com/micro-infrastructure/mini-lobcder/blob/master/Micro-Infra.md)
-- create a custom container:
-follow instructions [here](https://github.com/micro-infrastructure/mini-lobcder/blob/master/Custom-Container.md) 
+- create a micro-infrastructure description file follow instructions [here](https://github.com/micro-infrastructure/mini-lobcder/blob/master/Micro-Infra.md)
+- create a custom container. Core-infra has some pre-configured containers but you can create you own container images to be used in the micro-infrastructure for this follow instructions [here](https://github.com/micro-infrastructure/mini-lobcder/blob/master/Custom-Container.md) 
 - query core-infra service for runnning services. Once deployed, the exposed services will get a port > 30000 so they can be accessed from outside the k8s cluster. These ports are dynamically assigned and need to be queried after the micor-infrastrucure is deployed. This can be done using curl:
 ```
 curl --location --request GET 'HOST:30000/api/v1/infrastructure' \
