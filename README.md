@@ -5,6 +5,13 @@ The LOBCDER micro-infrastructure is setup of many depending parts. Here we descr
 ## Architecture
 ![](lobcder_Arch.png)
 
+The above figure illustrates the interactions of the main LOBCDER components and repositories. All the components run as pods in a Kubernettes cluster. The core services, core-infra and core-mongo, run in a process-core namespace. The user pods which make up the user's micro-infrastructure run in seperate namespace per user. User interact with the system by first submit a [micro-infra deployment file](https://github.com/micro-infrastructure/core-infra/blob/master/MICRO-INFRA.md) to [core-infra](https://github.com/micro-infrastructure/core-infra) service. The core-infra service translates the the micro-infra file to k8s deployment and service yaml descriptions, creates namespaces, secrets, credentials and submits them to the k8s cluster. This creates a pod with all the containers requested by the user.
+
+A standard deployment involves attaching to remote HPC file systems using ssh/sshfs, expose these filesystems to the user using a webdav endpoint and deploy the service-scp2scp API which is used by [IEEE]()
+to do 3rd party copies between HPC clusters. 
+
+A special case deployment is wen the k8s node is a DTN (Data Transfer Node) then containers can mount a local host folder E.g. [adaptor-ssh](https://github.com/micro-infrastructure/adaptor-ssh) mounts a local folder and exposes it through ssh.  
+
 ## Getting started mini-lobcder
 Mini-lobcder is LOBCDER micro-infrastructure packaged inside a VM which can be used to interact locally. This is done using Vagrant, VirtualBox, and Ansible. In the setup a Kubernetes 1 node cluster is setup and demo account is setup. 
 ### Installation
