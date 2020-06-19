@@ -67,4 +67,4 @@ curl --location --request PUT '$K8S_MASTER:30000/api/v1/user' \
 }'
 ``` 
 
-Where K8S_MASTER is the ip/hostname of the master node and ADMIN_TOKEN is the admin token retrieved in the previous step. This creates a user named user and the response is a user token for interacting with core-infra. The core-infra API reference is found [here]()(https://github.com/micro-infrastructure/core-infra/blob/master/API.md)
+Where K8S_MASTER is the ip/hostname of the master node and ADMIN_TOKEN is the admin token retrieved in the previous step. This creates a user named user and the response is a user token for interacting with core-infra. The core-infra API reference is found [here](https://github.com/micro-infrastructure/core-infra/blob/master/API.md)
