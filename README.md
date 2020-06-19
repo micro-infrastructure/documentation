@@ -12,13 +12,13 @@ to do 3rd party copies between HPC clusters.
 
 A special case deployment is wen the k8s node is a DTN (Data Transfer Node) then containers can mount a local host folder E.g. [adaptor-ssh](https://github.com/micro-infrastructure/adaptor-ssh) mounts a local folder and exposes it through ssh. 
 
-[Mini-LOBCDER](https://github.com/micro-infrastructure/mini-lobcder/blob/master/README.md)
-[User Documentation](user-docs.md)
-[Installation Documentation](installation-docs.md)
-[Core-infra API reference](https://github.com/micro-infrastructure/core-infra/blob/master/API.md)
-[Micro-infrastructure yaml description reference](https://github.com/micro-infrastructure/core-infra/blob/master/micro-infra.md)
-[Micro-infrastrucutre custom container howto](https://github.com/micro-infrastructure/core-infra/blob/master/custom-container.md
-[Service-scp2scp API reference](https://github.com/micro-infrastructure/service-scp2scp/blob/master/API.md)
-[LOFAR-specific Documentation](lofar-docs.md)
+- [Mini-LOBCDER](https://github.com/micro-infrastructure/mini-lobcder/blob/master/README.md)
+- [User Documentation](user-docs.md)
+- [Installation Documentation](installation-docs.md)
+- [Core-infra API reference](https://github.com/micro-infrastructure/core-infra/blob/master/API.md)
+- [Micro-infrastructure yaml description reference](https://github.com/micro-infrastructure/core-infra/blob/master/micro-infra.md)
+- [Micro-infrastrucutre custom container howto](https://github.com/micro-infrastructure/core-infra/blob/master/custom-container.md)
+- [Service-scp2scp API reference](https://github.com/micro-infrastructure/service-scp2scp/blob/master/API.md)
+- [LOFAR-specific Documentation](lofar-docs.md)
  
 
